@@ -1,0 +1,108 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>✅</strong> @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<!-- HERO BANNER -->
+<div class="hero-banner rounded-4 mb-5 p-5 text-white text-center"
+     style="background: linear-gradient(135deg, #1a6b3c 0%, #28a745 100%); min-height: 280px; display:flex; flex-direction:column; justify-content:center;">
+    <h1 class="display-4 fw-bold mb-3">🛒 SuperMercado Online</h1>
+    <p class="lead mb-4">Compra desde casa con la mejor selección de productos frescos y de calidad.</p>
+    <div>
+        <a asp-controller="Productos" asp-action="Index" class="btn btn-light btn-lg fw-bold me-3">
+            Ver Catálogo
+        </a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-light btn-lg">
+            Registrarse
+        </a>
+    </div>
+</div>
+
+<!-- CATEGORÍAS -->
+<h4 class="fw-bold mb-4">🏷️ Categorías destacadas</h4>
+<div class="row g-3 mb-5">
+    <div class="col-6 col-md-3">
+        <div class="card text-center border-0 shadow-sm h-100 py-3">
+            <div style="font-size:2.5rem;">🥦</div>
+            <div class="card-body py-2">
+                <h6 class="card-title fw-bold">Frutas y Verduras</h6>
+                <small class="text-muted">Productos frescos del día</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card text-center border-0 shadow-sm h-100 py-3">
+            <div style="font-size:2.5rem;">🥛</div>
+            <div class="card-body py-2">
+                <h6 class="card-title fw-bold">Lácteos</h6>
+                <small class="text-muted">Leche, queso y más</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card text-center border-0 shadow-sm h-100 py-3">
+            <div style="font-size:2.5rem;">🍞</div>
+            <div class="card-body py-2">
+                <h6 class="card-title fw-bold">Panadería</h6>
+                <small class="text-muted">Pan y bollería fresca</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="card text-center border-0 shadow-sm h-100 py-3">
+            <div style="font-size:2.5rem;">🧴</div>
+            <div class="card-body py-2">
+                <h6 class="card-title fw-bold">Limpieza</h6>
+                <small class="text-muted">Para tu hogar</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BENEFICIOS -->
+<h4 class="fw-bold mb-4">⭐ ¿Por qué elegirnos?</h4>
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="d-flex align-items-start">
+            <span style="font-size:2rem; margin-right:12px;">🚚</span>
+            <div>
+                <h6 class="fw-bold mb-1">Delivery rápido</h6>
+                <p class="text-muted small mb-0">Recibe tus productos en la puerta de tu casa en el menor tiempo posible.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="d-flex align-items-start">
+            <span style="font-size:2rem; margin-right:12px;">💳</span>
+            <div>
+                <h6 class="fw-bold mb-1">Pago seguro</h6>
+                <p class="text-muted small mb-0">Tus datos siempre protegidos con encriptación de datos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="d-flex align-items-start">
+            <span style="font-size:2rem; margin-right:12px;">🕐</span>
+            <div>
+                <h6 class="fw-bold mb-1">Disponible 24/7</h6>
+                <p class="text-muted small mb-0">Compra cuando quieras, desde donde estés, sin filas ni esperas.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CALL TO ACTION -->
+<div class="bg-light rounded-4 p-4 text-center mb-4">
+    <h5 class="fw-bold">¿Listo para hacer tu primera compra?</h5>
+    <p class="text-muted">Regístrate gratis y accede a todo nuestro catálogo de productos.</p>
+    <a asp-controller="Account" asp-action="Register" class="btn btn-success btn-lg">
+        Crear cuenta gratis
+    </a>
+</div>
